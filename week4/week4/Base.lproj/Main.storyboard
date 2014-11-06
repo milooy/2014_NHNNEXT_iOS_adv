@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="YSJ-rb-YID">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
@@ -35,7 +35,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="269" y="364"/>
+            <point key="canvasLocation" x="166.5" y="337.875"/>
         </scene>
         <!--Next View Controller-->
         <scene sceneID="f9S-Gb-dkl">
@@ -81,7 +81,103 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="htA-ZY-evL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1018" y="363.75"/>
+            <point key="canvasLocation" x="990" y="338.25"/>
+        </scene>
+        <!--애니메이션-->
+        <scene sceneID="RCz-qC-l8K">
+            <objects>
+                <tableViewController id="gXe-ZF-M8q" customClass="AniTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="jZy-9a-z0S">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.96470594409999999" green="0.40000003579999999" blue="0.36078432199999999" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="sectionIndexBackgroundColor" red="0.96470594409999999" green="0.40000003579999999" blue="0.36078432199999999" alpha="1" colorSpace="deviceRGB"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="jvY-fU-teF">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jvY-fU-teF" id="LHw-JN-EcQ">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="gXe-ZF-M8q" id="aWM-8f-a1D"/>
+                            <outlet property="delegate" destination="gXe-ZF-M8q" id="A5I-qC-iR5"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="애니메이션" id="NrF-jP-3XO"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gBi-Uw-QgK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1069" y="963.75"/>
+        </scene>
+        <!--Detail-->
+        <scene sceneID="GUX-BA-u1Y">
+            <objects>
+                <viewController storyboardIdentifier="Detail" id="d8I-nj-suw" customClass="Detail" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="v2L-uw-YBq"/>
+                        <viewControllerLayoutGuide type="bottom" id="TDx-gS-UPC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9hL-YG-Y4F">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Animal-Cat-Incline.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="gFl-Qa-tRr">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="135" y="106" width="200" height="200"/>
+                                </variation>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jmp-N5-ZoX">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="214" y="314" width="42" height="21"/>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.29946406609999998" green="0.72337980030000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="gFl-Qa-tRr"/>
+                                <exclude reference="Jmp-N5-ZoX"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular">
+                            <mask key="subviews">
+                                <include reference="gFl-Qa-tRr"/>
+                                <include reference="Jmp-N5-ZoX"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="name" destination="Jmp-N5-ZoX" id="QwE-iV-W3c"/>
+                        <outlet property="name_label" destination="Jmp-N5-ZoX" id="zrz-Sn-NvY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dQK-hC-Oh0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1739" y="963.75"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="XBS-gf-M63">
+            <objects>
+                <navigationController id="YSJ-rb-YID" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wRN-wu-7OU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="gXe-ZF-M8q" kind="relationship" relationship="rootViewController" id="DgI-eX-gZO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fGL-2L-wuw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="355.5" y="964.125"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Animal-Cat-Incline.jpg" width="400" height="400"/>
+    </resources>
 </document>
